@@ -75,8 +75,12 @@ body {
   width: calc((100% - 60px) / 3);
   border: 1px solid  #EEEEEE;
   background: #FFFFFF;
+
 }
 
+.item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .header-nav {
   display: flex;
   gap: 50px;
@@ -155,7 +159,20 @@ address {
   min-height: 16px;
   display: inline-block;
 }
-
+.contact .contact-link-mail {
+  display: flex;
+  gap: 10px;
+}
+.contact-link-mail:hover .mail-icon {
+  fill: var(--accent-color);
+}
+.contact .contact-link-tel {
+  display: flex;
+  gap: 10px;
+}
+.contact-link-tel:hover .tel-icon {
+  fill: var(--accent-color);
+}
 /*Акцент кольору на посилання studio*/
 .header-studio {
   color: var(--accent-color);
@@ -212,12 +229,42 @@ address {
   color: var(--body-text-color);
   width: 270px;
 }
+.group-list {
+     gap: 30px;
+  margin-bottom: 30px;
+ }
+.group-item {
+  width: calc((100% - 90px)/ 4);
+  height: 120px;
+ }
+.group-link {
+    width: 100%;
+    height: 100%;
+    background: #F5F4FA;
+    border-radius: 4px;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: var(--main-title-color);
+  }
 
 .hero {
   text-align: center;
   background-color: #2f303a;
   color: var(--main-title-color);
   padding: 200px 0;
+  /*overlay*/
+  max-width: 1200px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 1px solid black;
+  background: #C4C4C4;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+   url(../images/overlay.jpg);
 }
 
 .hero-title {
@@ -258,6 +305,7 @@ address {
 .command {
   background: #f5f4fa;
 }
+
 .item-command > .name-work {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -270,6 +318,61 @@ address {
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
+.title-soc {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-title-color);
+}
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+ }
+.soc-item {
+  width: 44px;
+  height: 44px;
+}
+.soc-link {
+  width: 100%;
+  height: 100%;
+  background:  var(--main-title-color);
+  border-radius: 50%;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill:#AFB1B8;
+}
+.soc-link:hover  {
+ fill: var(--main-title-color);
+ background-color: var(--accent-color);
+}
+.footer-soc-link:hover  {
+  background-color: var(--accent-color);
+}
+.footer-soc-list {
+   gap: 10px;
+ 
+ }
+.footer-soc-item {
+  width: 44px;
+  height: 44px;
+
+  }
+.footer-soc-link {
+  width: 100%;
+  height: 100%;
+ background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--main-title-color);
+}
+
+
 .img-list > .item-command {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -282,11 +385,35 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--body-text-color);
+  margin-bottom: 16px;
 }
-.color-footer {
+.client-list {
+  display: flex;
+}
+.client-item {
+  width: calc((100% - 150px)/ 6);
+  height: 92px;
+ 
+}
+.client-icon {
+  width: 100%;
+  height: 100%;
+   border: 1px solid #AFB1B8;
+  display: flex;
+ text-align: center;
+ justify-content: center;
+ fill:rgba(175, 177, 184, 1);
+}
+.client-link:hover .client-icon {
+  fill: var(--accent-color);
+  border: 1px solid #2196F3;
+  }
+
+
+/*.color-footer {
   background-color: #2f303a;
   padding: 60px 0;
-}
+}*/
 .logo-studio {
   font-family: "Raleway";
   font-weight: 700;
@@ -295,6 +422,27 @@ address {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 1);
   margin-bottom: 20px;
+}
+.contact-wrap  {
+ 
+   background-color: #2f303a;
+   padding: 60px 0;
+}
+.contact-wrap> .container {
+  display: flex;
+}
+.container-logo {
+  width: calc(100%/4 - 15px);
+  }
+.social {
+  width: calc(100%/4);
+  margin: 0;
+}
+.footer-soc-list {
+  margin: 0;
+}
+.footer-soc-link {
+  margin-top: 20px;
 }
 .contacts,
 .color-tel-black,
@@ -360,6 +508,12 @@ address {
 .cursor-btn:focus {
   color: var(--main-title-color);
   background-color: var(--accent-color);
+
+}
+
+.button-list:hover, .button-list:focus {
+   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+border-radius: 4px;
 }
 
 /*portfolio-title  скриває заголовок*/
