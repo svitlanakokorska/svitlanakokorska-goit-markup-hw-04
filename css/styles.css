@@ -344,7 +344,7 @@ address {
  fill: var(--main-title-color);
  background-color: var(--accent-color);
 }
-.footer-soc-link:hover  {
+.footer-soc-link:hover, .footer-soc-link:focus  {
   background-color: var(--accent-color);
 }
 .footer-soc-list {
