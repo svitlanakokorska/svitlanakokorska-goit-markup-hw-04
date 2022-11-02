@@ -74,7 +74,7 @@ body {
 
 }
 
-.card-set:hover .card-content {
+.card-content:hover  {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .header-nav {
@@ -233,10 +233,11 @@ address {
   width: calc((100% - 90px)/ 4);
   
  }
-
+.work {
+  padding-bottom: 0;
+}
 .group-link {
-     width: 100%;
-    height: 100%;
+     height: 120px;
     background: #F5F4FA;
     border-radius: 4px;
      display: flex;
@@ -339,7 +340,7 @@ address {
   justify-content: center;
   fill:#AFB1B8;
 }
-.soc-link:hover  {
+.soc-link:hover, .soc-link:focus  {
  fill: var(--main-title-color);
  background-color: var(--accent-color);
 }
@@ -398,7 +399,7 @@ address {
  border: 1px solid #AFB1B8;
  border-radius: 4px;
 }
-.client-link:hover {
+.client-link:hover, .client-link:focus {
   fill: var(--accent-color);
   border: 1px solid #2196F3;
   }
@@ -423,16 +424,15 @@ address {
   align-items: baseline;
 }
 .container-logo {
-  width: calc(100%/4 - 15px);
   margin-right: 70px;
   }
 .social {
-  width: calc(100%/4);
-  margin: 0;
+   margin: 0;
 }
 .footer-soc-list {
   margin: 0;
 }
+
 .footer-soc-link {
   margin-top: 20px;
 }
@@ -501,8 +501,7 @@ address {
   color: var(--main-title-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
+ }
 
 /*portfolio-title  скриває заголовок*/
 .portfolio-title,
